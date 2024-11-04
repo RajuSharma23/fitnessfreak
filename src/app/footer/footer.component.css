@@ -1,0 +1,41 @@
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #2e1d0b;
+    padding: 50px;
+    color: #fff;
+    gap: 30px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.brand-info h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ccb19c;
+    margin-bottom: 10px;
+}
+
+.brand-info p {
+    font-size: 18px;
+    color: #ccb19c;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ccb19c;
+    text-decoration: none;
+}
+
+.media-section img {
+    width: 100%;
+    border: 2px solid #ccb19c;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

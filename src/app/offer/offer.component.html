@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <!-- <div class="banner">
+    <img src="https://img10.hkrtcdn.com/35897/bnr_3589639_o.jpg" alt="">
+</div> -->
+<h1 >Offers</h1>
+  <div class="offer-wrapper">
+    <div class="card" *ngFor="let offer of offers">
+      <div class="card-image">
+        <img [src]="offer.image" alt="{{ offer.name }}" />
+      </div>
+      <div class="heading">
+        <h5>{{ offer.name }}</h5>
+        <div class="prices">
+          <div class="price">₹{{ offer.price }}</div>
+          <div class="price mrp">₹{{ offer.mrp }}</div>
+          <div class="price discount">Save ₹{{ offer.discount }}</div>
+        </div>
+        <div class="author"> By <span class="name">{{ offer.author }}</span> on {{ offer.date }}</div>
+      </div>
+      <button class="button-item" (click)="addToCart(offer)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+          </path>
+        </svg>
+        <div class="text">ADD TO CART</div>
+      </button>
+    </div>
+  </div>
+
+</body>
+
+</html>

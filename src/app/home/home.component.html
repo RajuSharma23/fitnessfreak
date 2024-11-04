@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="home-list">
+        <ul>
+            <li routerLink="/home"> Home</li>
+            <li routerLink="/offer">Offers</li>
+            <li routerLink="/stores"> Stores</li>
+            <li routerLink="/chat-ssupport">Chat Support</li>
+        </ul>
+    </div>
+    <div class="banner">
+        <img src="https://img10.hkrtcdn.com/35897/bnr_3589639_o.jpg" alt="">
+    </div>
+
+    <!-- <div class="video">
+        <video src="images\istockphoto-1197502559-640_adpp_is.mp4" autoplay></video>
+    </div> -->
+
+
+
+
+
+
+
+    <!-- proudect sectios 1 -->
+    <div class="recommendations">
+        <div class="section-header">
+            <h1>Frequently Bought
+                Together</h1>
+            <a href="#" routerLink="/about" class="view-menu">View Menu</a>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="card" *ngFor="let product of products">
+                <div class="card-image">
+                    <img [src]="product.image" alt="">
+                </div>
+                <div class="heading"> {{ product.name }}
+                    <div class="prices">
+                        <div class="price">₹{{ product.price }}</div>
+                        <div class="price mrp">₹{{ product.mrp }}</div>
+                        <div class="price discount">Save ₹{{ product.discount }}</div>
+                    </div>
+                    <div class="author"> By <span class="name">{{ product.author }}</span> {{ product.date }}</div>
+                </div>
+                <button class="button-item" (click)="addToCart(product)" routerLink="/cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+                        </path>
+                    </svg>
+                    <div class="text">ADD TO CART</div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- proudect sectios 2 -->
+
+
+    <div class="recommendations">
+        <div class="section-header">
+            <h1>Fit Food
+                Store</h1>
+            <a routerLink="/about" class="view-menu">View Menu</a>
+        </div>
+
+
+        <div class="card-wrapper">
+            <div class="card" *ngFor="let proudect_sectio_2 of proudect_sectios_2">
+                <div class="card-image">
+                    <img [src]="proudect_sectio_2.image" alt="">
+                </div>
+                <div class="heading"> {{ proudect_sectio_2.name }}
+                    <div class="prices">
+                        <div class="price">₹{{ proudect_sectio_2.price }}</div>
+                        <div class="price mrp">₹{{ proudect_sectio_2.mrp }}</div>
+                        <div class="price discount">Save ₹{{ proudect_sectio_2.discount }}</div>
+                    </div>
+                    <div class="author"> By <span class="name">{{ proudect_sectio_2.author }}</span> {{
+                        proudect_sectio_2.date }}</div>
+                </div>
+                <button class="button-item" (click)="addToCart(proudect_sectio_2)" routerLink="/cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+                        </path>
+                    </svg>
+                    <div class="text">ADD TO CART</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- proudect sectios 3 -->
+
+
+    <div class="recommendations">
+        <div class="section-header">
+            <h2>Pre Workout WrathX
+                Range</h2>
+            <a routerLink="/about" class="view-menu">View Menu</a>
+        </div>
+
+
+        <div class="card-wrapper">
+            <div class="card" *ngFor="let proudect_sectio_3 of proudect_sectios_3">
+                <div class="card-image">
+                    <img [src]="proudect_sectio_3.image" alt="">
+                </div>
+                <div class="heading"> {{ proudect_sectio_3.name }}
+                    <div class="prices">
+                        <div class="price">₹{{ proudect_sectio_3.price }}</div>
+                        <div class="price mrp">₹{{ proudect_sectio_3.mrp }}</div>
+                        <div class="price discount">Save ₹{{ proudect_sectio_3.discount }}</div>
+                    </div>
+                    <div class="author"> By <span class="name">{{ proudect_sectio_3.author }}</span> {{
+                        proudect_sectio_3.date }}</div>
+                </div>
+                <button class="button-item" (click)="addToCart(proudect_sectio_3)" routerLink="/cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+                        </path>
+                    </svg>
+                    <div class="text">ADD TO CART</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="testimonial-container">
+        <h2>What Our Customer Says</h2>
+        <div class="grid-container">
+            <div class="customer-grid item1">
+                <div class="testimonial-content">
+                    <div class="testimonial-box">
+                        <div class="profile-pic">
+                            <img src="https://cdn.pixabay.com/photo/2024/03/28/19/43/customer-service-8661577_640.png">
+                        </div>
+                        <p class="testimonial-text">
+                            I Have Tested Caffeine Coffee Many Times. Really Amazing To Me. The Combination Was Very
+                            Good. One Thing Is To Serve Extraordinary Coffee With Caffeine. I Will Order From Caffeine
+                            For Any Of My Coffee Needs.
+                        </p>
+                        <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <h3 class="customer-name">Priyansh Bansal</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customer-grid item2">
+                <div class="testimonial-content">
+                    <div class="testimonial-box">
+                        <div class="profile-pic">
+                            <img src="https://media.baamboozle.com/uploads/images/118683/1600939072_88052">
+                        </div>
+                        <p class="testimonial-text">
+                            I Have Tested Hot Chocolate Many Times. Really Amazing To Me. The Combination Was Very Good.
+                            One Thing Is To Serve Extraordinary Coffee With Caffeine. I Will Order From Caffeine For Any
+                            Of My Coffee Needs.
+                        </p>
+                        <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <h3 class="customer-name">Anuj Kumar</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid-container">
+            <div class="customer-grid item1">
+                <div class="testimonial-content">
+                    <div class="testimonial-box">
+                        <div class="profile-pic">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NHZ6HQrE9-Xmdh8Xr57h4g8NbRoVoN0SCA&s">
+                        </div>
+                        <p class="testimonial-text">
+                            I Have Tested Hot Coffee Many Times. Really Amazing To Me. The Combination Was Very Good.
+                            One Thing Is To Serve Extraordinary Coffee With Caffeine. I Will Order From Caffeine For Any
+                            Of My Coffee Needs.
+                        </p>
+                        <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <h3 class="customer-name">Gunjan</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customer-grid item2">
+                <div class="testimonial-content">
+                    <div class="testimonial-box">
+                        <div class="profile-pic">
+                            <img
+                                src="https://www.imagelato.com/images/article-image-smiling-guy-sitting-in-restaurant-05da1b21.jpg">
+                        </div>
+                        <p class="testimonial-text">
+                            I Have Tested Cappuccino Many Times. Really Amazing To Me. The Combination Was Very Good.
+                            One Thing Is To Serve Extraordinary Coffee With Caffeine. I Will Order From Caffeine For Any
+                            Of My Coffee Needs.
+                        </p>
+                        <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <h3 class="customer-name">Vishnu kumar</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <app-footer></app-footer> -->
+
+</body>
+
+</html>
